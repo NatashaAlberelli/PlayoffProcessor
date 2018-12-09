@@ -2,8 +2,8 @@ package pop.prototype;
 
 public class Bracket {
 	
-	int playerCount;
-	Node[][] tree;
+	private int playerCount;
+	private Node[][] tree;
 	
 	public Bracket(int playerCount) {
 		this.playerCount = playerCount;
@@ -33,26 +33,26 @@ public class Bracket {
 		int byeCount = highestPowerOfTwo - difference;		
 		
 		//first round player count is total player count minus bye count;
-		int byeRoundCount = playerCount - byeCount;
+		int byeRoundPlayerCount = playerCount - byeCount;
 		
 		int roundCount = 0;
 		
 		if (byeCount > 0) {
-			roundCount++;
+			++roundCount;
 		}
 		
-		for (int i = highestPowerOfTwo; i > 0; i /= 2) {
+		for (int i = highestPowerOfTwo; i > 2; i /= 2) {
 			++roundCount;
 		}
 
 		tree = new Node[roundCount][];
 		
 		for (int i = 0; i < roundCount; i++) {
-			if (byeCount > 0) {
-				tree[i] = new Node[byeRoundCount];
+			if (byeCount > 0 && i == 0) {
+				tree[i] = new Node[byeRoundPlayerCount / 2];
 				continue;
 			}
-			tree[i] = new Node[highestPowerOfTwo];
+			tree[i] = new Node[highestPowerOfTwo / 2];
 			highestPowerOfTwo /= 2;
 		}
 	}
