@@ -1,6 +1,0 @@
-
-/**
- * @author natas
- *
- */
-package prototype;
