@@ -1,13 +1,13 @@
 package pop.components;
 
-public abstract class Node {
+public abstract class ComplexNode {
 	private int partyCount;
 	private int victorCount;
 	private int theDistance;
 	private boolean bestOf;
 	Party[] parties;
 
-	public Node(int partyCount, int victorCount, int theDistance, boolean bestOf) {
+	public ComplexNode(int partyCount, int victorCount, int theDistance, boolean bestOf) {
 		this.partyCount = partyCount;
 		this.victorCount = victorCount;
 		this.theDistance = theDistance;
@@ -43,11 +43,11 @@ public abstract class Node {
 	 * 
 	 * 
 	 */
-	public abstract boolean areCompatibleNodes(Node[] compare);
+	public abstract boolean areCompatibleNodes(ComplexNode[] compare);
 	
 	
-	public static boolean areResolved(Node[] compare) {
-		for (Node x : compare) {
+	public static boolean areResolved(ComplexNode[] compare) {
+		for (ComplexNode x : compare) {
 			if(!x.isResolved()) {
 				return false;
 			}

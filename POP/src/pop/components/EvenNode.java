@@ -17,7 +17,7 @@ package pop.components;
  * @author natas
  *
  */
-public abstract class EvenNode extends Node {
+public abstract class EvenNode extends ComplexNode {
 
 	public EvenNode(int partyCount, int victorCount, int theDistance, boolean bestOf) {
 		super(partyCount, victorCount, theDistance, bestOf);
@@ -31,13 +31,13 @@ public abstract class EvenNode extends Node {
 	}*/
 
 	@Override
-	public boolean areCompatibleNodes(Node[] compare) {		
+	public boolean areCompatibleNodes(ComplexNode[] compare) {		
 		int victorSum = 0;
 		//accesses first element victor count to compare to the rest
 		int testVictorCount = compare[0].getVictorCount();
 		
 		//check for equal victor count, adds to victor sum
-		for (Node x : compare) {
+		for (ComplexNode x : compare) {
 			if (testVictorCount != x.getVictorCount()) {
 				return false;
 			}
@@ -45,14 +45,14 @@ public abstract class EvenNode extends Node {
 		}
 		
 		//check for party count of all elements equal to victor sum
-		for (Node x : compare) {
+		for (ComplexNode x : compare) {
 			if (victorSum != x.getPartyCount()) {
 				return false;
 			}
 		}
 		
 		//Check for resolved
-		return Node.areResolved(compare);
+		return ComplexNode.areResolved(compare);
 	}
 	
 	@Override
