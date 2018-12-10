@@ -1,16 +1,20 @@
-package pop.prototype;
+package bracket.logic;
 
-public class Node {
+import pop.interfaces.Playable.WinLose;
+import pop.persons.Player;
+
+public class ProtoNode {
 	public enum Resolution {
 		WAITING,
 		IN_PROGRESS,
-		RESOLVED;
+		RESOLVED,
+		DRAW;
 	}
 	
 	private Player[] players;
 	private Resolution state = Resolution.WAITING;
 	
-	public Node (Player[] players) {
+	public ProtoNode (Player[] players) {
 		this.players = players;
 	}
 	
@@ -28,7 +32,7 @@ public class Node {
 	
 	public Player getWinner() {
 		for (Player x : players) {
-			if (x.getState() == Player.WinLose.WINNER){
+			if (x.getState() == WinLose.WINNER){
 				return x;
 			}
 		}
@@ -37,7 +41,7 @@ public class Node {
 	
 	public Player getLoser() {
 		for (Player x : players) {
-			if (x.getState() == Player.WinLose.LOSER){
+			if (x.getState() == WinLose.LOSER){
 				return x;
 			}
 		}

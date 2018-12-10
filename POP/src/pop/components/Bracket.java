@@ -1,9 +1,11 @@
-package pop.prototype;
+package pop.components;
+
+import bracket.logic.ProtoNode;
 
 public class Bracket {
 	
 	int playerCount;
-	Node[][] tree;
+	ProtoNode[][] tree;
 	
 	public Bracket(int playerCount) {
 		this.playerCount = playerCount;
@@ -14,7 +16,7 @@ public class Bracket {
 		return playerCount;
 	}
 	
-	public Node[][] getTree() {
+	public ProtoNode[][] getTree() {
 		return tree;
 	}
 	
@@ -45,14 +47,14 @@ public class Bracket {
 			++roundCount;
 		}
 
-		tree = new Node[roundCount][];
+		tree = new ProtoNode[roundCount][];
 		
 		for (int i = 0; i < roundCount; i++) {
 			if (byeCount > 0) {
-				tree[i] = new Node[byeRoundCount];
+				tree[i] = new ProtoNode[byeRoundCount];
 				continue;
 			}
-			tree[i] = new Node[highestPowerOfTwo];
+			tree[i] = new ProtoNode[highestPowerOfTwo];
 			highestPowerOfTwo /= 2;
 		}
 	}

@@ -1,5 +1,7 @@
 package pop.components;
 
+import pop.groups.Party;
+
 public abstract class ComplexNode {
 	private int partyCount;
 	private int victorCount;

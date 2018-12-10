@@ -6,6 +6,8 @@ package bracket.logic;
 import java.util.ArrayList;
 import java.util.List;
 
+import pop.future.Entrant;
+
 /**
  * A {@code Node} represents an individual game, round, bout, series or match;
  * the amount of rounds or best-of-N games in that round, bout, or series and a
@@ -26,12 +28,12 @@ import java.util.List;
  * @version 1.0
  * @since JDK1.8
  */
-public abstract class Node {
+public abstract class AbstractNode {
 
 	private static final int MINIMUM_CONTESTANT_COUNT = 2;
 
 	/** The list of {@code Contestants} */
-	private List<Contestant> contestants;
+	private List<Entrant> contestants;
 
 	/** A total amount of contestants currently participating */
 	private int contestantCount;
@@ -46,26 +48,26 @@ public abstract class Node {
 			"Node must have a capacity of atleast 2 contestants");
 
 	NullPointerException badContestantList = new NullPointerException(
-			"Node must have a non-null, non-empty contestant list with atleast " + Node.MINIMUM_CONTESTANT_COUNT
+			"Node must have a non-null, non-empty contestant list with atleast " + AbstractNode.MINIMUM_CONTESTANT_COUNT
 					+ " contestants");
 
-	public Node() {
-		this(Node.MINIMUM_CONTESTANT_COUNT);
+	public AbstractNode() {
+		this(AbstractNode.MINIMUM_CONTESTANT_COUNT);
 	}
 
-	public Node(int cCap) throws IndexOutOfBoundsException {
-		if (cCap < Node.MINIMUM_CONTESTANT_COUNT) {
+	public AbstractNode(int cCap) throws IndexOutOfBoundsException {
+		if (cCap < AbstractNode.MINIMUM_CONTESTANT_COUNT) {
 			throw tooFewContestants;
 		}
 		this.contestantCapacity = cCap;
-		contestants = new ArrayList<Contestant>(cCap);
+		contestants = new ArrayList<Entrant>(cCap);
 	}
 
-	public Node(List<Contestant> cList) throws NullPointerException {
+	public AbstractNode(List<Entrant> cList) throws NullPointerException {
 		if (cList == null) {
 			throw badContestantList;
 		}
-		if (cList.isEmpty() || cList.size() < Node.MINIMUM_CONTESTANT_COUNT) {
+		if (cList.isEmpty() || cList.size() < AbstractNode.MINIMUM_CONTESTANT_COUNT) {
 			throw badContestantList;
 		}
 		this.contestants = cList;
@@ -85,7 +87,7 @@ public abstract class Node {
 		return theDistance;
 	}
 
-	public void addContestant(Contestant c) {
+	public void addContestant(Entrant c) {
 		contestants.add(c);
 	}
 }
