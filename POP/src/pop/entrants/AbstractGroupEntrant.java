@@ -1,37 +1,28 @@
-/*
-* Natasha Alberelli
-*/
-package pop.future;
+package pop.entrants;
 
-import pop.interfaces.Nameable;
+import pop.interfaces.GroupEntrant;
 import pop.interfaces.Playable;
+import pop.roles.Role.RoleTypeGroups;
 
-/**
- * A {@code Entrant} represents an individual, team, vehicle, animal, or any
- * other entrant into a tournament of any type.
- *
- * An entrant agrees to act as a participant in tournament, bracket, playoff or
- * any other competitive event.
- *
- * @author Natasha Alberelli
- * @version 1.0
- * @since JDK1.8
- */
-public abstract class Entrant implements Nameable, Playable {
-
-
-	private String name;
+public abstract class AbstractGroupEntrant implements GroupEntrant{
+	private RoleTypeGroups roleType = RoleTypeGroups.TEAM;
 	private WinLose state = WinLose.UNDETERMINED;
-
-	public Entrant(String name) {
+	private String name;
+	
+	public AbstractGroupEntrant(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public RoleTypeGroups getRole() {
+		return roleType;
 	}
 
 	@Override
 	public String getName() {
 		return name;
 	}
-	
+
 	@Override
 	public void setName(String name) {
 		this.name = name;

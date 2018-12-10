@@ -1,4 +1,4 @@
-package pop.components;
+package bracket.logic;
 
 import pop.groups.Party;
 

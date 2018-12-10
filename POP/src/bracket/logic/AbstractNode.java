@@ -6,7 +6,7 @@ package bracket.logic;
 import java.util.ArrayList;
 import java.util.List;
 
-import pop.future.Entrant;
+import pop.interfaces.Entrant;
 
 /**
  * A {@code Node} represents an individual game, round, bout, series or match;

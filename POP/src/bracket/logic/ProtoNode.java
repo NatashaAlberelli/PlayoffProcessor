@@ -1,7 +1,7 @@
 package bracket.logic;
 
+import pop.entrants.Player;
 import pop.interfaces.Playable.WinLose;
-import pop.persons.Player;
 
 public class ProtoNode {
 	public enum Resolution {

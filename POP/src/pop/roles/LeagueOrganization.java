@@ -1,4 +1,4 @@
-package pop.groups;
+package pop.roles;
 
 public enum LeagueOrganization {
 	PRESIDENT,

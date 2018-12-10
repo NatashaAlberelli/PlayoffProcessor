@@ -1,4 +1,4 @@
-package pop.components;
+package bracket.logic;
 
 /**
  * An {@code EvenNode} represents a {@code Node} that has a procreation
