@@ -1,7 +1,5 @@
 package pop.components;
 
-import bracket.logic.ProtoNode;
-
 public class Bracket {
 	
 	int playerCount;
