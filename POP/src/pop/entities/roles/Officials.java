@@ -1,7 +1,5 @@
 package pop.entities.roles;
 
-import pop.entities.Role;
-
 public enum Officials implements Role{
 	REFEREE,
 	LINEMAN,

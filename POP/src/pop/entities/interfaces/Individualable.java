@@ -1,6 +1,6 @@
 package pop.entities.interfaces;
 
-import pop.entities.Role.RoleTypeIndividual;
+import pop.entities.roles.Role.RoleTypeIndividual;
 
 public interface Individualable {
 	public RoleTypeIndividual getRole();

@@ -1,7 +1,7 @@
 package pop.entities;
 
-import pop.entities.Role.RoleTypeGroup;
 import pop.entities.interfaces.Groupable;
+import pop.entities.roles.Role.RoleTypeGroup;
 
 public abstract class GroupEntity extends Entity implements Groupable {
 

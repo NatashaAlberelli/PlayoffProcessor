@@ -1,6 +1,6 @@
 package pop.entities.interfaces;
 
-import pop.entities.Role.RoleTypeIndividual;
+import pop.entities.roles.Role.RoleTypeIndividual;
 
 public abstract class IndividualableAbstract implements Individualable {	
 	

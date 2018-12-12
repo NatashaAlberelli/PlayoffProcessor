@@ -1,6 +1,6 @@
 package pop.entities.interfaces;
 
-import pop.entities.Role.RoleTypeGroup;
+import pop.entities.roles.Role.RoleTypeGroup;
 
 public abstract class GroupableAbstract implements Groupable {
 	private RoleTypeGroup role = RoleTypeGroup.GANG_PACK;
