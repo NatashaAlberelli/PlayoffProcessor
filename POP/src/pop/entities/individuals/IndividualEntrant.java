@@ -1,4 +1,4 @@
-package pop.entities;
+package pop.entities.individuals;
 
 import pop.entities.interfaces.Individualable;
 import pop.entities.roles.Role.RoleTypeIndividual;

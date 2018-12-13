@@ -1,27 +1,9 @@
-/*
-* Natasha Alberelli
-*/
 package pop.entities;
-import pop.entities.interfaces.Playable;
 
-/**
- * A {@code Entrant} represents an individual, team, vehicle, animal, or any
- * other entrant into a tournament of any type.
- *
- * An entrant agrees to act as a participant in tournament, bracket, playoff or
- * any other competitive event.
- *
- * @author Natasha Alberelli
- * @version 1.0
- * @since JDK1.8
- */
-public abstract class Entrant extends Entity implements Playable{
+public abstract class PlayableAbstract implements Playable {
+
 	private WinLose state = WinLose.UNDETERMINED;
-	
-	public Entrant(String name) {
-		super(name);
-	}
-	
+
 	public WinLose getState() {
 		return state;
 	}

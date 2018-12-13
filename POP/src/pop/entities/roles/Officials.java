@@ -12,6 +12,6 @@ public enum Officials implements Role{
 
 	@Override
 	public Role getParent() {
-		return Role.RoleTypeIndividual.STAFF;
+		return pop.entities.RoleTypeIndividual.STAFF;
 	}
 }

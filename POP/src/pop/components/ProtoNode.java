@@ -1,7 +1,7 @@
 package pop.components;
 
+import pop.entities.Playable.WinLose;
 import pop.entities.individuals.Player;
-import pop.entities.interfaces.Playable.WinLose;
 
 public class ProtoNode {
 	public enum Resolution {

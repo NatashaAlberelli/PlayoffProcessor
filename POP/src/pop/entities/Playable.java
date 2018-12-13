@@ -1,4 +1,4 @@
-package pop.entities.interfaces;
+package pop.entities;
 
 public interface Playable {
 	public enum WinLose {

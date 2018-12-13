@@ -10,4 +10,6 @@ public interface Role {
 		}
 	}	
 	public Role getParent();
+
+	//ADD STRING FIELD AND TO STRING METHOD FOR IDENTITY CLASS
 }

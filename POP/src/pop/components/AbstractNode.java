@@ -6,7 +6,7 @@ package pop.components;
 import java.util.ArrayList;
 import java.util.List;
 
-import pop.entities.Entrant;
+import pop.entities.individuals.Entrant;
 
 /**
  * A {@code Node} represents an individual game, round, bout, series or match;

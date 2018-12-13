@@ -2,7 +2,7 @@ package pop.entities.properties;
 
 import java.util.List;
 
-import pop.entities.interfaces.Nameable;
+import pop.entities.Nameable;
 
 public class GroupDefault<T extends Nameable> extends GroupAbstract<T>{
 

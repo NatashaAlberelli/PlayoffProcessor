@@ -3,8 +3,7 @@ package pop.entities.groups;
 import java.util.ArrayList;
 import java.util.List;
 
-import pop.entities.Entrant;
-import pop.entities.GroupEntrant;
+import pop.entities.individuals.Entrant;
 
 /**
  * This class is intended to represent a container for an {@code Entrant}, or

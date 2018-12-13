@@ -2,7 +2,7 @@ package pop.entities.properties;
 
 import java.util.List;
 
-import pop.entities.Entrant;
+import pop.entities.individuals.Entrant;
 
 public abstract class GroupEntrants<T extends Entrant> extends GroupAbstract<T> {
 	

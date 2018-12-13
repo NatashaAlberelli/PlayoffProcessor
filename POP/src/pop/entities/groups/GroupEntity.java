@@ -1,9 +1,10 @@
-package pop.entities;
+package pop.entities.groups;
 
+import pop.entities.Entity;
 import pop.entities.interfaces.Groupable;
 import pop.entities.roles.Role.RoleTypeGroup;
 
-public abstract class GroupEntity extends Entity implements Groupable {
+public abstract class GroupEntity extends Entity implements GroupableEntity {
 
 	private RoleTypeGroup role;
 	

@@ -11,6 +11,6 @@ public enum Media implements Role {
 
 	@Override
 	public Role getParent() {
-		return Role.RoleTypeIndividual.MEDIA;
+		return pop.entities.RoleTypeIndividual.MEDIA;
 	}
 }
