@@ -1,4 +1,4 @@
-kpackage pop.entities;
+package pop.entities;
 
 import java.util.List;
 
