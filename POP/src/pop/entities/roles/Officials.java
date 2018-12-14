@@ -10,8 +10,26 @@ public enum Officials implements Role{
 	TOURNAMENT_ORGANIZER,
 	BRACKET_MANAGER;
 
-	@Override
-	public Role getParent() {
-		return pop.entities.RoleTypeIndividual.STAFF;
+
+	public enum RoleTypeIndividual implements Role {
+		/** anyone who competes */
+		CONTESTANT,
+		SPECTATOR,
+		
+		/** Authority */
+		OFFICIALS,
+		/** support */
+		STAFF,
+		
+		/** news and entertainment people */
+		
+		/** non-contestant part of a larger group */
+		MEMBER,
+		/** doing a job */
+
+		MEDIA,
+		/** anyone else involved */
+		PARTICIPANT;
 	}
+		
 }

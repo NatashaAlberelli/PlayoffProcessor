@@ -8,9 +8,4 @@ public enum Media implements Role {
 	CAMERAMAN,
 	ALUMNI,
 	COMMENTATOR;
-
-	@Override
-	public Role getParent() {
-		return pop.entities.RoleTypeIndividual.MEDIA;
-	}
 }

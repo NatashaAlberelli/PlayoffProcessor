@@ -8,6 +8,7 @@ public abstract class Entity {
 	Role role;
 	//use bridge pattern for roles
 	
+	//IDENTITY ARRAYLISTS SHOULD CHANGE TO NORMAL ARRAYS AND USE VARARGS
 	
 	//optional
 	Playable play;
