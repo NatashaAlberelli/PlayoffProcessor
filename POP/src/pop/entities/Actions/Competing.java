@@ -1,22 +1,25 @@
-package pop.entities;
+package pop.entities.Actions;
 
-public abstract class PlayableAbstract implements Playable {
-
+public class Competing extends Actions {
+	public enum WinLose {
+		WINNER,
+		LOSER,
+		UNDETERMINED;
+	}
+	
 	private WinLose state = WinLose.UNDETERMINED;
 
 	public WinLose getState() {
 		return state;
 	}
 	
-	@Override
 	public boolean isDefeated() {
-		if (state == Playable.WinLose.LOSER) {
+		if (state == Competing.WinLose.LOSER) {
 			return true;
 		}
 		return false;
 	}
 
-	@Override
 	public boolean isVictorious() {
 		if (isDefeated()) {
 			return false;
@@ -24,7 +27,6 @@ public abstract class PlayableAbstract implements Playable {
 		return true;
 	}
 	
-	@Override
 	public boolean isUndetermined() {
 		if (isVictorious() || isDefeated()) {
 			return false;
@@ -32,17 +34,14 @@ public abstract class PlayableAbstract implements Playable {
 		return true;
 	}
 
-	@Override
 	public void toDefeat() {
 		state = WinLose.LOSER;
 	}
 
-	@Override
 	public void toVictory() {
 		state = WinLose.WINNER;
 	}
 	
-	@Override
 	public void toUndetermined() {
 		state = WinLose.UNDETERMINED;
 	}

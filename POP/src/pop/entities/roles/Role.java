@@ -1,7 +1,7 @@
 package pop.entities.roles;
 
-public interface Role {	
-	public default String toRoleString() {
+public abstract class Role {	
+	public String toRoleString() {
 		return this.getClass().getName();
 	}
 }

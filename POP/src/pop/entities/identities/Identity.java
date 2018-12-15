@@ -16,7 +16,7 @@ public abstract class Identity {
 		KEY("Key", true),
 		NAME("Name", true),
 		NUMBER("Number", true),
-		ROLE("Role", true),
+		//ROLE("Role", true),
 		ALIAS("Aliases", false),
 		TITLE("Titles", false),
 		TAG("Tags", false),

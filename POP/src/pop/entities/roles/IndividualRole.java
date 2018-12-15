@@ -1,5 +1,5 @@
 package pop.entities.roles;
 
-public interface IndividualRole extends Role{
-	
+public abstract class IndividualRole extends Role {
+
 }

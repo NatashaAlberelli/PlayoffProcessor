@@ -3,7 +3,7 @@
 */
 package pop.entities.individuals;
 import pop.entities.Entity;
-import pop.entities.Playable;
+import pop.entities.Actions.Competing;
 
 /**
  * A {@code Entrant} represents an individual, team, vehicle, animal, or any
@@ -16,7 +16,7 @@ import pop.entities.Playable;
  * @version 1.0
  * @since JDK1.8
  */
-public abstract class Entrant extends Entity implements Playable{
+public abstract class Entrant extends Entity implements Competing{
 	private WinLose state = WinLose.UNDETERMINED;
 	
 	public Entrant(String name) {
@@ -29,7 +29,7 @@ public abstract class Entrant extends Entity implements Playable{
 	
 	@Override
 	public boolean isDefeated() {
-		if (state == Playable.WinLose.LOSER) {
+		if (state == Competing.WinLose.LOSER) {
 			return true;
 		}
 		return false;
