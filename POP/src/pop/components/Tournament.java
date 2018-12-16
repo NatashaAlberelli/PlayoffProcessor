@@ -1,6 +1,5 @@
-package pop.events;
+package pop.components;
 
-import pop.components.Bracket;
 import pop.entities.individuals.Player;
 
 public class Tournament {

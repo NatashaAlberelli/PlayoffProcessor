@@ -6,8 +6,6 @@ package pop.components;
 import java.util.ArrayList;
 import java.util.List;
 
-import pop.entities.individuals.Entrant;
-
 /**
  * A {@code Node} represents an individual game, round, bout, series or match;
  * the amount of rounds or best-of-N games in that round, bout, or series and a
