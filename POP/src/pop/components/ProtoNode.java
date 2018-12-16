@@ -1,6 +1,6 @@
 package pop.components;
 
-import pop.entities.Actions.Competing.WinLose;
+import pop.entities.actions.Competing.WinLose;
 import pop.entities.individuals.Player;
 
 public class ProtoNode {

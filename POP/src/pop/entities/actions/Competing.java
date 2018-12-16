@@ -1,4 +1,4 @@
-package pop.entities.Actions;
+package pop.entities.actions;
 
 public class Competing extends Actions {
 	

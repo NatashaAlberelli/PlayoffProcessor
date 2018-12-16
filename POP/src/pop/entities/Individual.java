@@ -1,6 +1,6 @@
 package pop.entities;
 
-import pop.entities.Actions.Actions;
+import pop.entities.actions.Actions;
 import pop.entities.identities.Identity;
 
 public abstract class Individual extends Entity{
