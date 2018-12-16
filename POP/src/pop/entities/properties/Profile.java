@@ -1,4 +1,4 @@
-package pop.entities.roles;
+package pop.entities.properties;
 
 public class Profile {
 	// for information about an entity, bio, notable achievements, awards, history,
