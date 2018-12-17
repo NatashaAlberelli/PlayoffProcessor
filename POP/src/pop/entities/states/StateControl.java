@@ -1,12 +1,12 @@
-package pop.entities.actions;
+package pop.entities.states;
 
-public abstract class Actions {
+public abstract class StateControl {
 	public interface ActionEnum {
 	}
 	
 	private State[] states;
 	
-	public Actions(State[] states) {
+	public StateControl(State[] states) {
 		this.states = states;
 	}
 	

@@ -1,11 +1,11 @@
 package pop.entities;
 
-import pop.entities.actions.Actions;
 import pop.entities.identities.Identity;
+import pop.entities.states.StateControl;
 
 public abstract class Individual extends Entity{
 	
-	public Individual(Identity id, Actions actions) {
+	public Individual(Identity id, StateControl actions) {
 		super(id, actions);
 	}
 }

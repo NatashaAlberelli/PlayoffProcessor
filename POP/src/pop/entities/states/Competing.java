@@ -1,6 +1,6 @@
-package pop.entities.actions;
+package pop.entities.states;
 
-public class Competing extends Actions {
+public class Competing extends StateControl {
 	
 	public enum CompetingActions implements ActionEnum{
 		LOSE,

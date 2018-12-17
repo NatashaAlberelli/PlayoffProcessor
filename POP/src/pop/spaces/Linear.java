@@ -1,4 +1,8 @@
-package pop.events;
+package pop.spaces;
+
+import java.util.List;
+
+import pop.spaces.elements.Element;
 
 /**
  * A series of events that together form a larger event
@@ -14,6 +18,9 @@ package pop.events;
  * @author Natasha Alberelli
  *
  */
-public class Linear extends Series {
+public abstract class Linear extends Sequence {
 
+	public Linear(Element head, List<? extends Element> body, Element foot) {
+		super(head, body, foot);
+	}
 }

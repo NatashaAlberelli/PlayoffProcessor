@@ -1,4 +1,6 @@
-package pop.events;
+package pop.spaces.series;
+
+import pop.spaces.elements.Element;
 
 /**
  * Any event that features a set number of participants with a win-lose
@@ -9,6 +11,9 @@ package pop.events;
  * @author Natasha Alberelli
  *
  */
-public class Matchup extends Event {
-
+public class Matchup extends Game {
+	
+	public Matchup() {
+		super(null);
+	}
 }

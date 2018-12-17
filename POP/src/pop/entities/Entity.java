@@ -1,13 +1,13 @@
 package pop.entities;
 
-import pop.entities.actions.Actions;
 import pop.entities.identities.Identity;
+import pop.entities.states.StateControl;
 
 public abstract class Entity {
 	private Identity identity;
-	private Actions actions;
+	private StateControl actions;
 	
-	public Entity(Identity id, Actions actions) {
+	public Entity(Identity id, StateControl actions) {
 		this.identity = id;
 		this.actions = actions;
 	}
@@ -22,7 +22,7 @@ public abstract class Entity {
 		return identity;
 	}
 	
-	public Actions getActions() {
+	public StateControl getActions() {
 		return actions;
 	}
 }

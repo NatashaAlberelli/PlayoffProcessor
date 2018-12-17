@@ -1,4 +1,4 @@
-package pop.events;
+package pop.spaces.series;
 
 /**
  * A special kind of tree that can contain multiple tree, and allow trees that
@@ -8,6 +8,8 @@ package pop.events;
  *
  */
 
-public class ComplexTree extends Tree {
-
+public class NTierBracket extends Tree {
+	public NTierBracket() {
+		super(null);
+	}
 }

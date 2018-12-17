@@ -3,8 +3,8 @@ package pop.entities;
 import java.util.Comparator;
 import java.util.List;
 
-import pop.entities.actions.Actions;
 import pop.entities.identities.Identity;
+import pop.entities.states.StateControl;
 
 public abstract class Group extends Entity {
 	
@@ -13,9 +13,11 @@ public abstract class Group extends Entity {
 	private int count;
 	private int capacity;
 	
-	public Group(Identity id, Actions actions) {
+	public Group(Identity id, StateControl actions) {
 		super(id, actions);
 	}
+	
+	//SPLIT UP THE BELOW FUNCTIONALITY INTO GROUP SPEACIALTIES, OR INTERFACES TO IMPLEMENT
 	
 	public abstract boolean add(Entity entity);
 	public abstract boolean remove(Entity entity);

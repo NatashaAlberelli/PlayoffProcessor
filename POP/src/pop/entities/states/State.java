@@ -1,4 +1,4 @@
-package pop.entities.actions;
+package pop.entities.states;
 
 public interface State {
 
