@@ -1,6 +1,6 @@
 package pop.spaces.blocks;
 
-import pop.spaces.Series;
+import pop.spaces.series.Series;
 
 /**
  * a block that doesn't have plates 

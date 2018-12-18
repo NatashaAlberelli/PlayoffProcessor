@@ -1,4 +1,4 @@
-package pop.spaces;
+package pop.spaces.series;
 
 import java.util.List;
 

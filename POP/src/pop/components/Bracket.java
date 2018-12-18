@@ -1,9 +1,11 @@
 package pop.components;
 
+import pop.spaces.blocks.Node;
+
 public class Bracket {
 	
 	int playerCount;
-	ProtoNode[][] tree;
+	Node[][] tree;
 	
 	public Bracket(int playerCount) {
 		this.playerCount = playerCount;
@@ -14,7 +16,7 @@ public class Bracket {
 		return playerCount;
 	}
 	
-	public ProtoNode[][] getTree() {
+	public Node[][] getTree() {
 		return tree;
 	}
 	
@@ -45,14 +47,14 @@ public class Bracket {
 			++roundCount;
 		}
 
-		tree = new ProtoNode[roundCount][];
+		tree = new Node[roundCount][];
 		
 		for (int i = 0; i < roundCount; i++) {
 			if (byeCount > 0) {
-				tree[i] = new ProtoNode[byeRoundCount];
+				tree[i] = new Node[byeRoundCount];
 				continue;
 			}
-			tree[i] = new ProtoNode[highestPowerOfTwo];
+			tree[i] = new Node[highestPowerOfTwo];
 			highestPowerOfTwo /= 2;
 		}
 	}

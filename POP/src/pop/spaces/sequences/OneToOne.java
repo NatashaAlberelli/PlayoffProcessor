@@ -6,6 +6,6 @@ package pop.spaces.sequences;
  * @author Natasha Alberelli
  *
  */
-public class OneToOne implements SequenceProperty {
+public class OneToOne extends CompositeSequence {
 
 }

@@ -2,7 +2,6 @@ package pop.spaces.mocs;
 
 import java.util.List;
 
-import pop.spaces.Moc;
 import pop.spaces.blocks.Block;
 
 /**
