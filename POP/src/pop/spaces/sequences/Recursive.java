@@ -1,8 +1,9 @@
-package pop.spaces;
+package pop.spaces.sequences;
 
-import java.util.List;
+/** a sequence that contains elements that determine the next element by calculation.
+ */
 
-import pop.spaces.elements.Element;
+//REDO ALL OF THIS WRITING BELOW
 
 // might consider a recursive series to be a decorator of sorts, though
 // implementation may be difficult, what allows an event to inform another? or
@@ -10,8 +11,7 @@ import pop.spaces.elements.Element;
 // prime states for a series event?
 
 /**
- * a series, linear or recursive, that is informed by, or informs a series,
- * linear or recursive.
+ * 
  * <p>
  * recursive event, where the results of a composite event inform, decide,
  * control, or influence the next group of events., example: the Regular season
@@ -23,9 +23,6 @@ import pop.spaces.elements.Element;
  * @author Natasha Alberelli
  *
  */
-public abstract class Recursive extends Sequence {
+public abstract class Recursive implements SequenceProperty {
 
-	public Recursive(Element head, List<? extends Element> body, Element foot) {
-		super(head, body, foot);
-	}
 }

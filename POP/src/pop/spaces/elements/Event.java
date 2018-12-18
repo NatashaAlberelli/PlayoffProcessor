@@ -1,5 +1,5 @@
 package pop.spaces.elements;
 
-public abstract class Event implements Element{
-	public abstract void go();
+public interface Event extends Element{
+	public void go();
 }

@@ -1,4 +1,4 @@
-package pop.spaces.series;
+package pop.spaces.mocs;
 
 /**
  * A special kind of tree that can contain multiple tree, and allow trees that

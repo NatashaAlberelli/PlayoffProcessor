@@ -1,14 +1,13 @@
 package pop.spaces;
 
 import java.util.Collection;
-import java.util.List;
 
 import pop.spaces.elements.Element;
 
-public abstract class Space {
+public abstract class Space implements Element{
 	private Collection<Element> elements;
 
-	public Space(List<? extends Element> elements) {
+	public Space(Collection<? extends Element> elements) {
 		this.elements.addAll(elements);
 	}
 	

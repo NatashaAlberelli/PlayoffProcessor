@@ -3,6 +3,7 @@ package pop.spaces;
 import java.util.List;
 
 import pop.spaces.elements.Element;
+import pop.spaces.sequences.Sequence;
 
 /**
  * Any event that contains multiple events

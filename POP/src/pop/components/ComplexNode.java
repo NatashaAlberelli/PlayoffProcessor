@@ -1,38 +1,92 @@
 package pop.components;
 
-import pop.entities.groups.Party;
+import pop.entities.Entity;
+
+/**
+ * A {@code Node} represents an individual game, round, bout, series or match;
+ * the amount of rounds or best-of-N games in that round, bout, or series and a
+ * list of {@code Contestant}s, usually two. For example, a round could have
+ * many bouts, or best-of series, or just one game. In NHL playoffs, a round
+ * consists of a best-of-seven series.
+ * <p>
+ * The purpose of a {@code Node} is to represent an individual face-off,
+ * match-up, fight, or any other competition between a number of
+ * {@code Contestant}s where winner(s) and loser(s) are determined.
+ * <p>
+ * {@code Nodes} can be used in a {@code Tree} bracket, each node representing a
+ * match-up, game, or round in the overall bracket, or can be used in a single
+ * round competition setup such as a Battle Royale, free-for-all, death-match,
+ * fight, duel or race.
+ *
+ * @author Natasha Alberelli
+ * @version 1.0
+ * @since JDK1.8
+ */
 
 public abstract class ComplexNode {
-	private int partyCount;
+	public enum Resolution {
+		WAITING,
+		IN_PROGRESS,
+		RESOLVED,
+		DRAW;
+	}
+	private static final int MINIMUM_CONTESTANT_COUNT = 2;
+	
+	private int contestantCapacity;
 	private int victorCount;
 	private int theDistance;
 	private boolean bestOf;
-	Party[] parties;
+	Entity[] parties;
+	
+	private Resolution state = Resolution.WAITING;
+	
 
-	public ComplexNode(int partyCount, int victorCount, int theDistance, boolean bestOf) {
-		this.partyCount = partyCount;
+	IndexOutOfBoundsException tooFewContestants = new IndexOutOfBoundsException(
+			"Node must have a capacity of atleast 2 contestants");
+
+	NullPointerException badContestantList = new NullPointerException(
+			"Node must have a non-null, non-empty contestant list with atleast " + MINIMUM_CONTESTANT_COUNT
+					+ " contestants");
+	
+	public ComplexNode(int victorCount, int theDistance, boolean bestOf) {
 		this.victorCount = victorCount;
 		this.theDistance = theDistance;
 		this.bestOf = bestOf;
 	}
+	
+	public Resolution getState() {
+		return state;
+	}
+	
+	public void setState(Resolution r) {
+		state = r;
+	}
+	
+	
+	public abstract Entity[] getWinner();
+	public abstract Entity[] getLoser();
 
 	public int getPartyCount() {
-		return partyCount;
+		return parties.length;
 	}
 
+
+	public int getContestantCapacity() {
+		return contestantCapacity;
+	}
+	
 	public int getVictorCount() {
 		return victorCount;
 	}
 
-	public int getTheDistance() {
-		return theDistance;
-	}
+	//make this a calculation based on the series within
+	public abstract int getTheDistance();
 
 	public boolean isBestOf() {
 		return bestOf;
 	}
 	
-	public Party[] getParties() {
+	public Entity[] getParties() {
 		return parties;
 	}
 
@@ -55,5 +109,61 @@ public abstract class ComplexNode {
 			}
 		}
 		return true;
+	}
+	
+	/**
+	 * An {@code EvenNode} represents a {@code Node} that has a procreation
+	 * constructor, meaning that a new {@code Node} can be created from other
+	 * {@code Node}s if:
+	 * 
+	 * <ul>
+	 * <li>all nodes passed in have been resolved</li>
+	 * <li>all nodes have the same party count and victor count</li>
+	 * <li>the sum of all nodes' victor counts is equal to a single party count</li>
+	 * </ul>
+	 * 
+	 * This class should only be extended if the sub-class is intended to be used
+	 * with those rules in mind.
+	 * 
+	 * @author natas
+	 *
+	 */
+	public abstract class EvenNode extends ComplexNode {
+
+		public EvenNode(int victorCount, int theDistance, boolean bestOf) {
+			super(victorCount, theDistance, bestOf);
+		}
+
+		//Implement later
+		/*
+		public EvenNode(Node[] resolvedNodes) {
+			if(areCompatibleNodes(resolvedNodes)) {
+			}
+		}*/
+
+		@Override
+		public boolean areCompatibleNodes(ComplexNode[] compare) {		
+			int victorSum = 0;
+			//accesses first element victor count to compare to the rest
+			int testVictorCount = compare[0].getVictorCount();
+			
+			//check for equal victor count, adds to victor sum
+			for (ComplexNode x : compare) {
+				if (testVictorCount != x.getVictorCount()) {
+					return false;
+				}
+				victorSum += x.getVictorCount();
+			}
+			
+			//check for party count of all elements equal to victor sum
+			for (ComplexNode x : compare) {
+				if (victorSum != x.getPartyCount()) {
+					return false;
+				}
+			}
+			
+			//Check for resolved
+			return ComplexNode.areResolved(compare);
+		}
 	}
 }

@@ -1,9 +1,9 @@
-package pop.spaces.series;
+package pop.spaces.mocs;
 
 import java.util.List;
 
-import pop.spaces.Block;
 import pop.spaces.Moc;
+import pop.spaces.blocks.Block;
 
 /**
  * tree-like a competition that features a bracket, or brackets of some sort
@@ -12,7 +12,7 @@ import pop.spaces.Moc;
  *
  */
 
-public class Tree extends Moc {
+public abstract class Tree extends Moc {
 
 	public Tree(Block peak, List<Block> blocks, Block base) {
 		super(peak, blocks, base);

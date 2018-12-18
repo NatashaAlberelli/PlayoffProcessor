@@ -1,11 +1,11 @@
-package pop.spaces;
+package pop.spaces.sequences;
 
-import java.util.List;
+//
 
-import pop.spaces.elements.Element;
+//REDO ALL THE BELOW
 
 /**
- * A series of events that together form a larger event
+ * A sequence of elements that follow one after the other
  * <p>
  * linear like a set number of rounds in a boxing event, period or quarter
  * count, or alternating set amount attempts (like a best-of-n staged
@@ -18,9 +18,5 @@ import pop.spaces.elements.Element;
  * @author Natasha Alberelli
  *
  */
-public abstract class Linear extends Sequence {
-
-	public Linear(Element head, List<? extends Element> body, Element foot) {
-		super(head, body, foot);
-	}
+public abstract class Linear implements SequenceProperty {
 }
