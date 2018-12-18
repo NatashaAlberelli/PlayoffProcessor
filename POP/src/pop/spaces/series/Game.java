@@ -2,7 +2,6 @@ package pop.spaces.series;
 
 import java.util.List;
 
-import pop.spaces.Series;
 import pop.spaces.sequences.Sequence;
 
 /**

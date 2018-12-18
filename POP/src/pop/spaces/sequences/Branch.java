@@ -1,5 +1,5 @@
 package pop.spaces.sequences;
 
-public class Branch implements SequenceProperty {
+public class Branch extends Composite {
 
 }

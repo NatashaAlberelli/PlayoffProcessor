@@ -1,5 +1,5 @@
 package pop.spaces.sequences;
 
-public class ManyToOne implements SequenceProperty {
+public class ManyToOne extends CompositeSequence {
 
 }

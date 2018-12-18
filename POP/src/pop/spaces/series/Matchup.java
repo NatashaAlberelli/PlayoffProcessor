@@ -1,7 +1,5 @@
 package pop.spaces.series;
 
-import pop.spaces.elements.Element;
-
 /**
  * Any event that features a set number of participants with a win-lose
  * condition/ rule-set, definite winners, and definite losers example: any
@@ -11,7 +9,7 @@ import pop.spaces.elements.Element;
  * @author Natasha Alberelli
  *
  */
-public class Matchup extends Game {
+public abstract class Matchup extends Game {
 	
 	public Matchup() {
 		super(null);

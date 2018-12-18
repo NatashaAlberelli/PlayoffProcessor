@@ -2,8 +2,8 @@ package pop.spaces.blocks;
 
 import java.util.List;
 
-import pop.spaces.Series;
 import pop.spaces.sequences.Sequence;
+import pop.spaces.series.Series;
 
 /**
  * A block starts and ends with a series, the starting series can be informed by

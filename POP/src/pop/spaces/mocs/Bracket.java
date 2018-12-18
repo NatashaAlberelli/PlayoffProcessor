@@ -1,6 +1,6 @@
 package pop.spaces.mocs;
 
-public class Bracket extends Tree {
+public abstract class Bracket extends Tree {
 	public Bracket() {
 		super(null);
 	}

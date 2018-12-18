@@ -1,4 +1,4 @@
-package pop.components;
+package pop.spaces.blocks;
 
 import pop.entities.Entity;
 
@@ -34,7 +34,6 @@ public abstract class ComplexNode {
 	
 	private int contestantCapacity;
 	private int victorCount;
-	private int theDistance;
 	private boolean bestOf;
 	Entity[] parties;
 	
@@ -48,9 +47,8 @@ public abstract class ComplexNode {
 			"Node must have a non-null, non-empty contestant list with atleast " + MINIMUM_CONTESTANT_COUNT
 					+ " contestants");
 	
-	public ComplexNode(int victorCount, int theDistance, boolean bestOf) {
+	public ComplexNode(int victorCount,  boolean bestOf) {
 		this.victorCount = victorCount;
-		this.theDistance = theDistance;
 		this.bestOf = bestOf;
 	}
 	
@@ -130,8 +128,8 @@ public abstract class ComplexNode {
 	 */
 	public abstract class EvenNode extends ComplexNode {
 
-		public EvenNode(int victorCount, int theDistance, boolean bestOf) {
-			super(victorCount, theDistance, bestOf);
+		public EvenNode(int victorCount, boolean bestOf) {
+			super(victorCount, bestOf);
 		}
 
 		//Implement later

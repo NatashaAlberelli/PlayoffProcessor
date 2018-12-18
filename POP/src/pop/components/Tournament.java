@@ -1,17 +1,17 @@
 package pop.components;
 
-import pop.entities.individuals.Player;
+import pop.entities.Entity;
 
 public class Tournament {
 	Bracket bracket;
-	Player[] players;
+	Entity[] players;
 	
-	public Tournament(Player[] players) {
+	public Tournament(Entity[] players) {
 		this.players = players;
 		bracket = new Bracket(players.length);
 	}
 	
-	public Player[] getPlayers() {
+	public Entity[] getPlayers() {
 		return players;
 	}
 	

@@ -8,7 +8,7 @@ package pop.spaces.mocs;
  *
  */
 
-public class NTierBracket extends Tree {
+public abstract class NTierBracket extends Tree {
 	public NTierBracket() {
 		super(null);
 	}

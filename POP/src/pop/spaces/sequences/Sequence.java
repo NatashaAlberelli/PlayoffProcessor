@@ -7,9 +7,6 @@ import pop.spaces.Space;
 import pop.spaces.elements.Element;
 import pop.spaces.elements.Event;
 
-//consider making recursive and sequence interfaces to be implemented? or perhaps,
-//a component of Series (influences the result/limit determination)
-
 //consider using an array as a backing structure, for this and space
 
 public abstract class Sequence extends Space implements Event {
